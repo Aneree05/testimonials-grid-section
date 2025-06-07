@@ -1,4 +1,5 @@
-@import url('https://fonts.google.com/specimen/Barlow+Semi+Condensed');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap');
+
 
 *{
     box-sizing: border-box;
@@ -114,6 +115,27 @@ body{
 .attribution a:visited{
     color: grey;
 }
+
+@media (max-width: 1024px) {
+    .testimonials {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card:nth-of-type(1) {
+        grid-column: span 2;
+    }
+
+    .card:nth-of-type(4) {
+        grid-column: span 2;
+        grid-row: auto;
+    }
+
+    .card:nth-of-type(5) {
+        grid-column: 1 / -1; /* move full width below */
+        grid-row: auto;
+    }
+}
+
 
 @media(max-width: 768px){
     .testimonials{
